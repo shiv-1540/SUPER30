@@ -50,7 +50,7 @@ const BlogCard = ({ user1_id, post_id, title, content, imgSrc, userProfile, user
       return;
     }
     try {
-      const response = await fetch(`http://localhost:3001/post/${post_id}/acomment`, {
+      const response = await fetch(`https://litarcpages.onrender.com/post/${post_id}/acomment`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ const BlogCard = ({ user1_id, post_id, title, content, imgSrc, userProfile, user
     const user_id = localStorage.getItem('user_id');
     if (user_id) {
       try {
-        const response = await fetch(`http://localhost:3001/post/${post_id}/like/${user_id}`, { method: 'POST' });
+        const response = await fetch(`https://litarcpages.onrender.com/${post_id}/like/${user_id}`, { method: 'POST' });
         if (response.ok) {
           setLikes(prevLikes => prevLikes + 1);
           setHasLiked(true);
@@ -98,7 +98,7 @@ const BlogCard = ({ user1_id, post_id, title, content, imgSrc, userProfile, user
     const user_id = localStorage.getItem('user_id');
     if (user_id) {
       try {
-        const response = await fetch(`http://localhost:3001/post/${post_id}/dislike/${user_id}`, { method: 'POST' });
+        const response = await fetch(`https://litarcpages.onrender.com/${post_id}/dislike/${user_id}`, { method: 'POST' });
         if (response.ok) {
           setDislikes(prevDislikes => prevDislikes + 1);
           setHasDisliked(true);
