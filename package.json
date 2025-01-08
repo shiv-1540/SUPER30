@@ -4,13 +4,11 @@
   "description": "A blog app for posting blogs.",
   "main": "index.js",
   "type": "module",
-  
-  "scripts": { 
+  "scripts": {
     "dev": "nodemon backend/server.js",
-    "build":"npm install && npm install --prefix frontend && npm run build --prefix frontend",
-    "start":"nodemon backend/server.js"
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "nodemon backend/server.js"
   },
-  
   "author": "Shivshankar Ghyar",
   "license": "ISC",
   "dependencies": {
@@ -35,6 +33,7 @@
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
+    "url": "^0.11.4",
     "uuid": "^10.0.0"
   },
   "devDependencies": {

@@ -8,6 +8,8 @@ import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import multer from "multer";
 import session from "express-session";
+//import url from "url";
+
 
 //const MySQLStore = require('express-mysql-session')(session);
 import path from 'path';
@@ -35,15 +37,25 @@ app.use(cors(corsOptions));
 app.use(cookieParser());
 
 
-// Database connection
+// // Database connection
 const db = mysql.createConnection({
-    host: '127.0.0.1',
-    port: 3306,
-    user: 'root',
-    password: '4102',
-    database: 'blog'
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
 });
 
+// const dbUrl = process.env.DATABASE_URL;
+// const dbConfig = new URL(dbUrl);
+
+// const db = mysql.createConnection({
+//     host: dbConfig.hostname,
+//     port: dbConfig.port,
+//     user: dbConfig.username,
+//     password: dbConfig.password,
+//     database: dbConfig.pathname.split('/')[1]
+// });
 
 db.connect(err => {
     if (err) {
