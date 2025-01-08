@@ -1,0 +1,115 @@
+#Home{
+  background-color: red;
+  height:100vh;
+  width:100vw;
+}
+  /* Ensure the body takes up full height */
+html, body {
+  height:100vh;
+  margin: 0;
+  padding: 0;
+  width:100vw;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin:auto;
+}
+
+/* The main container should take up at least the full height of the viewport */
+.container {
+  /* Full viewport height */
+  padding-top: 80px; /* Space for the fixed header */
+  box-sizing: border-box;
+}
+
+/* Header styling for fixed positioning */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #141313;
+  border-bottom: 1px solid #ddd;
+  /* padding: 15px; */
+  z-index: 1000;
+  height:100px;
+}
+
+
+#container{
+  width:100vw;
+}
+/* Ensure the content section scrolls if needed */
+.content {
+  padding: 20px;
+  overflow-y: auto; /* Allow vertical scrolling */
+   height: calc(100vh - 80px);  /* Adjust based on header height */
+   width:100vw;
+}
+
+#content{
+ /* right:20px; */
+}
+/* Blog card styling */
+.blog-card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.blog-card:hover {
+  transform: scale(1.02);
+}
+
+.profile-picture-small {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.username-text {
+  font-size: 1rem; /* Adjust font size as needed */
+  font-weight: 500; /* Adjust font weight for emphasis */
+}
+.fixed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0d0d0e; /* Dark background for the header */
+  color: #fff; /* White text color */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensures the header is above other content */
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.logo-container b {
+  font-size: 1.5rem;
+}
+
+.logo-container .tagline {
+  font-size: 0.875rem; /* Smaller font size for tagline */
+  margin: 0;
+}
+
+.profile-picture {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  object-fit: cover; /* Ensures the image fits nicely within the circle */
+}
+
+.btn-danger {
+  margin-right: 10px; /* Space between logout button and profile picture */
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.ml-3 {
+  margin-left: 1rem;
+}
+

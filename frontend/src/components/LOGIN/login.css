@@ -1,0 +1,347 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+   background: url('https://images.pexels.com/photos/4226802/pexels-photo-4226802.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');  
+   
+  background-size: cover;
+  overflow:visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.signup{
+   height:80vh;
+}
+/* 
+#form1{
+  position:fixed;
+  top:80px;
+  left:80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 30px;
+  border: 2px solid black;
+  padding:30px;
+} */
+section {
+  position: absolute; /* Position container absolutely */
+  left: 5%; /* Move container to the left side */
+  top: 50%; /* Center container vertically */
+  transform: translateY(-50%); /* Adjust for exact vertical centering */
+  width: 400px; /* Fixed width for container */
+  background: rgba(255, 255, 255, 0.8); /* Translucent white background */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+  font-size: 2.5em;
+  color: #1b1e1c; /* Beige color */
+  margin-bottom: 20px;
+}
+
+section .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+
+section .form .inputBox {
+  position: relative;
+}
+
+section .form .inputBox input {
+  width: 35%;
+  background: #f7f4f1; /* Light beige background */
+  border: 1px solid #d0b89e; /* Beige border */
+  padding: 15px;
+  border-radius: 4px;
+  color: #6c5b4e; /* Dark beige text */
+  font-size: 1em;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+section .form .inputBox input:focus {
+  background: #fff; /* White background on focus */
+  border-color: #111111; /* Slightly darker beige border on focus */
+}
+
+section .form .inputBox i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #d0b89e; /* Beige icon color */
+  transition: color 0.3s;
+}
+
+section .form .inputBox input:focus ~ i {
+  color: #c5a88e; /* Darker beige icon on focus */
+}
+
+section .form .inputBox input[type="submit"] {
+  background: #c5a88e; /* Beige background for the submit button */
+  color: #fff; /* White text */
+  font-weight: bold;
+  cursor: pointer;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  transition: background 0.3s, opacity 0.3s;
+}
+
+section .form .inputBox input[type="submit"]:hover {
+  background: #2d1b03; /* Darker beige on hover */
+}
+
+section .form .inputBox input[type="submit"]:active {
+  opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+  section {
+    width: 350px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    width: 300px;
+    padding: 20px;
+  }
+}
+
+.signin{
+  height: 50vh;
+}
+.signin .form .links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Add some space above the links */
+}
+
+.signin .form .links span {
+  margin-right: 20px; /* Add space between the links */
+}
+
+.signin .form .links a {
+  color: #94470b; /* Beige color for the links */
+  text-decoration: none;
+  font-size: 0.9em; /* Slightly smaller text size */
+}
+
+.signin .form ,a {
+  color: black; /* Beige color for the links */
+  text-decoration: none;
+  font-size: 0.9em; /* Slightly smaller text size */
+}
+
+
+.signin .form .links a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.signin .form .links a:last-child {
+  margin-right: 0; /* Remove right margin from the last link */
+}
+
+
+/* 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+body 
+{
+  background: #000;
+  overflow: hidden;
+}
+section 
+{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+section::before 
+{
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  background: linear-gradient(#000,#0f0,#000);
+  animation: animate 5s linear infinite;
+}
+@keyframes animate 
+{
+  0%
+  {
+    transform: translateY(-100%);
+  }
+  100%
+  {
+    transform: translateY(100%);
+  }
+}
+section span 
+{
+  position: relative;
+  display: block;
+  width: calc(6.25vw - 2px);
+  height: calc(6.25vw - 2px);
+  background: #181818;
+  z-index: 2;
+  transition: 1.5s;
+}
+section span:hover 
+{
+  background: #0f0;
+  transition: 0s;
+}
+
+section .signin
+{
+  position: absolute;
+  width: 400px;
+  background: #222;  
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 15px 35px rgba(0,0,0,9);
+}
+section .signin .content 
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+section .signin .content h2 
+{
+  font-size: 2em;
+  color: #0f0;
+  text-transform: uppercase;
+}
+section .signin .content .form 
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+section .signin .content .form .inputBox
+{
+  position: relative;
+  width: 100%;
+}
+section .signin .content .form .inputBox input 
+{
+  position: relative;
+  width: 100%;
+  background: #333;
+  border: none;
+  outline: none;
+  padding: 25px 10px 7.5px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1em;
+}
+section .signin .content .form .inputBox i 
+{
+  position: absolute;
+  left: 0;
+  padding: 15px 10px;
+  font-style: normal;
+  color: #aaa;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.signin .content .form .inputBox input:focus ~ i,
+.signin .content .form .inputBox input:valid ~ i
+{
+  transform: translateY(-7.5px);
+  font-size: 0.8em;
+  color: #fff;
+}
+.signin .content .form .links 
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.signin .content .form .links a 
+{
+  color: #fff;
+  text-decoration: none;
+}
+.signin .content .form .links a:nth-child(2)
+{
+  color: #0f0;
+  font-weight: 600;
+}
+.signin .content .form .inputBox input[type="submit"]
+{
+  padding: 10px;
+  background: #0f0;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.35em;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+input[type="submit"]:active
+{
+  opacity: 0.6;
+}
+@media (max-width: 900px)
+{
+  section span 
+  {
+    width: calc(10vw - 2px);
+    height: calc(10vw - 2px);
+  }
+}
+@media (max-width: 600px)
+{
+  section span 
+  {
+    width: calc(20vw - 2px);
+    height: calc(20vw - 2px);
+  }
+} */
+
+#form1{
+
+}
