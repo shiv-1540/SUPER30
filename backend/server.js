@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 
 // CORS and cookie parser setup
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: 'https://litarcpages.onrender.com',
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
 };
